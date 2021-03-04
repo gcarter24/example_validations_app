@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   namespace :api do
     get "/user" => "user#index"
     post "/user" => "user#create"
-    get "/user" => "user#show"
+    get "/user/:id" => "user#show"
     patch "/user/:id" => "user#update"
+    delete "/user/:id" => "user#destroy"
   end
 end
